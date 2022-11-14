@@ -19,4 +19,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-CMD dotnet discord-bot.dll
+CMD dotnet Date.dll

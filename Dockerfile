@@ -23,4 +23,5 @@ RUN dotnet publish "Date.csproj" -c Release -o /app/publish /p:UseAppHost=false
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Date.dll"]
+
+CMD dotnet discord-bot.dll

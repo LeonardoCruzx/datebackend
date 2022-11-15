@@ -23,7 +23,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("EnableCORS", builder =>
     {
-        builder.AllowAnyOrigin()
+        builder
+            .AllowAnyOrigin()
+            .WithOrigins("http://localhost:4200", "https://date-frontend.vercel.app")
             .AllowAnyHeader()
             .AllowAnyMethod()
             .Build();
